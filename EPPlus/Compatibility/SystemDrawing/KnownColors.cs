@@ -406,6 +406,7 @@ namespace OfficeOpenXml.Compatibility.System.Drawing
 			return GetName((short)kc);
 		}
 
+#if false
 		// FIXME: Linear scan
 		public static Color FindColorMatch(Color c)
 		{
@@ -423,6 +424,7 @@ namespace OfficeOpenXml.Compatibility.System.Drawing
 
 			return Color.Empty;
 		}
+#endif
 
 		// When this method is called, we teach any new color(s) to the Color class
 		// NOTE: This is called (reflection) by System.Windows.Forms.Theme (this isn't dead code)

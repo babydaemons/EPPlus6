@@ -12,7 +12,7 @@ namespace OfficeOpenXml.Compatibility
     {
         public static Encoding GetEncoding(int codePage)
         {
-#if NETFULL
+#if NET48
             return Encoding.GetEncoding(codePage);
 #else
             return CodePagesEncodingProvider.Instance.GetEncoding(codePage);
@@ -26,7 +26,7 @@ namespace OfficeOpenXml.Compatibility
         /// <returns></returns>
         public static Encoding GetEncoding(string name)
         {
-#if NETFULL
+#if NET48
             return Encoding.GetEncoding(name);
 #else
             return CodePagesEncodingProvider.Instance.GetEncoding(name);
